@@ -1,0 +1,14 @@
+---
+- name: "GENERAL PACK: Instalar Pacotes Necessários"
+  apt:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+      - vim
+      - curl
+      - git
+      - wget
+      - remmina
+      - flameshot

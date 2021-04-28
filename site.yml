@@ -1,0 +1,9 @@
+- name: Instalação de Pacotes
+  become: true
+  become_method: sudo
+  hosts: local
+  tags: 
+    - master
+  roles:
+    - InstallGeneralPackages
+    - InstallDocker
