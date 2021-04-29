@@ -1,0 +1,4 @@
+---
+- name: Instalando Docker no Debian 10.
+  include_tasks: debian10.yml
+  tags: debian10

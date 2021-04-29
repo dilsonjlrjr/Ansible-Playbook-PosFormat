@@ -14,7 +14,7 @@
 
 - name: "DOCKER: Adicionar APT Key"
   apt_key:
-    url: https://download.docker.com/linux/debian/gpg
+    url: https://download.docker.com/linux/debian/gpg 
     state: present
 
 - name: "DOCKER: Adicionar repositório para Debian 10"
@@ -40,7 +40,7 @@
 
 - name: "DOCKER: Adicionar Usuário ao Grupo Docker"
   user:
-    name: nilson
+    name: "{{ usuario }}"
     group: docker
 
 - name: "DOCKER: Criar Diretório Service"
@@ -53,7 +53,7 @@
     src: files/daemon.json
     dest: /etc/docker/daemon.json
 
-- name: "DOCKER - Reiniciar Serviços"
+- name: "DOCKER: Reiniciar Serviços"
   service:
     name: docker
     state: restarted
