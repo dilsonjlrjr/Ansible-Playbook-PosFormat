@@ -1,4 +1,8 @@
 ---
 - name: Instalando Docker no Debian 10.
-  include_tasks: debian10.yml
-  tags: debian10
+  include: debian10-buster.yml
+  tags: buster
+
+- name: Instalando Docker no Ubuntu 20.04 (Focal Fossa).
+  include: ubuntu-focal.yml
+  tags: focal

@@ -13,4 +13,5 @@
       - remmina
       - flameshot
   tags:
-    - debian10
+    - buster
+    - focal
