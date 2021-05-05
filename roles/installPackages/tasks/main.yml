@@ -8,7 +8,6 @@
     packages:
       - vim
       - curl
-      - git
       - wget
       - remmina
       - flameshot
