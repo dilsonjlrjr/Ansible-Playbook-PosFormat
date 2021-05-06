@@ -1,0 +1,38 @@
+---
+- name: Upgrade all apt packages
+  apt:
+    upgrade: dist
+    force_apt_get: yes
+
+- name: Add PPA IconPack Papirus
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/papirus/papirus/ubuntu focal main
+    state: present
+    filename: "papirus-papirus-focal"
+
+- name: "Add Apt Key Google Chrome"
+  apt_key:
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    state: present
+
+- name: "Adicionar repositório do Chrome"
+  apt_repository:
+    repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+    filename: "google-chrome"
+
+- name: "Instalar Pacotes Necessários"
+  apt:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+      - vim
+      - curl
+      - wget
+      - remmina
+      - flameshot
+      - arc-theme
+      - papirus-icon-theme
+      - google-chrome-stable

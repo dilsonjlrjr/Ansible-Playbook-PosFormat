@@ -1,0 +1,38 @@
+---
+- name: Instalar Terraform
+  unarchive:
+    src: https://releases.hashicorp.com/terraform/0.15.2/terraform_0.15.2_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Instalar Vagrant
+  unarchive:
+    src: https://releases.hashicorp.com/vagrant/2.2.16/vagrant_2.2.16_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Baixar JetBrain Tools
+  unarchive:
+    src: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.20.8352.tar.gz
+    dest: /home/{{ usuario }}/Downloads
+    remote_src: yes
+
+- name: Instalar JetBrain Tools
+  copy:
+    src: /home/{{ usuario }}/Downloads/jetbrains-toolbox-1.20.8352/jetbrains-toolbox
+    dest: /usr/local/bin
+    mode: '0755'
+
+- name: Baixar Telegram
+  unarchive:
+    src: https://telegram.org/dl/desktop/linux
+    dest: /home/{{ usuario }}/Downloads
+    remote_src: yes
+
+- name: Instalar Telegram
+  copy:
+    src: /home/{{ usuario }}/Downloads/Telegram/Telegram
+    dest: /usr/local/bin
+    mode: '0755'
+
+

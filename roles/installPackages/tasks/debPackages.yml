@@ -1,0 +1,12 @@
+---
+- name: Instalar Dbeaver
+  apt:
+    deb: https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+
+- name: Instalar VSCode
+  apt:
+    deb: https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+
+- name: Instalar Insomnia
+  apt:
+    deb: https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website

@@ -1,16 +1,19 @@
 ---
-- name: "GENERAL PACK: Instalar Pacotes Necessários"
-  apt:
-    name: "{{ packages }}"
-    state: present
-    update_cache: yes
-  vars:
-    packages:
-      - vim
-      - curl
-      - wget
-      - remmina
-      - flameshot
+- name: Instalar Pacotes Indispensáveis
+  include: installPack.yml
+  tags:
+    - buster
+    - focal
+    - pack
+
+- name: Instalar Pacotes Compactados (Zip ou Tar)
+  include: zippedPack.yml
+  tags:
+    - buster
+    - focal
+
+- name: Instalar Pacotes em .deb
+  include: debPackages.yml
   tags:
     - buster
     - focal
