@@ -10,3 +10,7 @@
 - name: Instalar Insomnia
   apt:
     deb: https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website
+
+- name: Instalar Discord
+  apt:
+    deb: https://discordapp.com/api/download?platform=linux&format=deb
