@@ -4,4 +4,3 @@
   hosts: local
   roles:
     - installPackages
-    - installDocker
