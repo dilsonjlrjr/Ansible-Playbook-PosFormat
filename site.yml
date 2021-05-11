@@ -6,3 +6,4 @@
     - installPackages
     - installDocker
     - installK8s
+    - installNodeJS
