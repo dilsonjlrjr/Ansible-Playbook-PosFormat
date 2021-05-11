@@ -2,3 +2,7 @@
 - src: git@github.com:nilsonvieira/InstallDocker.git
   scm: git
   name: installDocker
+
+- src: git@github.com:nilsonvieira/InstallK8s.git
+  scm: git
+  name: installK8s
