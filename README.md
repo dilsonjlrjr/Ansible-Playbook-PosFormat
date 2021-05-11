@@ -30,6 +30,12 @@ cp -rp id_rsa.pub authorized_keys
 - Deepin 20.2 (Debian 10.8)
 
 # Como Usar o Playbook
+## Galaxy
+Antes de tudo instale as dependências de repositórios necessários com Ansible Galaxy.
+
+```bash
+ansible-galaxy install -r requirements.yml roles
+```
 ## Execução do Playbook
 ### No Tags
 Para Instalação completa sem a necessidade de Definir Ambiente
@@ -56,3 +62,4 @@ shutdown -r now
 - Ubuntu 20.04 LTS (Focal Fossa)
 - Pop!_OS 20.04 LTS (Based on Focal)
 - Mint 20.1 Ulyana (Based on Focal)
+
