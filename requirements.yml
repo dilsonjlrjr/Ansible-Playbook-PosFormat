@@ -1,4 +1,4 @@
 ---
 - src: git@github.com:nilsonvieira/InstallDocker.git
-  type: git
-  name: InstallDocker
+  scm: git
+  name: installDocker

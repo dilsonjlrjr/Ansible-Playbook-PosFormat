@@ -1,0 +1,63 @@
+---
+- name: "DOCKER: Instalar Dependencias"
+  apt:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
+
+- name: "DOCKER: Adicionar APT Key"
+  apt_key:
+    url: https://download.docker.com/linux/debian/gpg 
+    state: present
+
+- name: "DOCKER: Adicionar repositório para Debian 10"
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+    state: present
+
+- name: "DOCKER - Instalação dos pacotes"
+  apt:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+
+- name: "DOCKER: Iniciando Serviço"
+  service:
+    name: docker
+    state: started
+
+- name: "DOCKER: Adicionar Usuário ao Grupo Docker"
+  user:
+    name: "{{ usuario }}"
+    group: docker
+
+- name: "DOCKER: Criar Diretório Service"
+  file:
+    path: /etc/systemd/system/docker.service.d
+    state: directory
+
+- name: "DOCKER: Criar daemon.json"
+  copy:
+    src: files/daemon.json
+    dest: /etc/docker/daemon.json
+
+- name: "DOCKER: Reiniciar Serviços"
+  service:
+    name: docker
+    state: restarted
+
+- name: "DOCKER: Ralizar Daemon Reload"
+  command: systemctl daemon-reload
+  become: yes
