@@ -3,6 +3,6 @@
   become_method: sudo
   hosts: local
   roles:
-    # - installPackages
-    # - installDocker
+    - installPackages
+    - installDocker
     - installK8s

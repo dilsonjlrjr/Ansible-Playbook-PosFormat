@@ -34,7 +34,7 @@ cp -rp id_rsa.pub authorized_keys
 Antes de tudo instale as dependências de repositórios necessários com Ansible Galaxy.
 
 ```bash
-ansible-galaxy install -r requirements.yml roles
+ansible-galaxy install -r requirements.yml --roles-path roles
 ```
 ## Execução do Playbook
 ### No Tags
