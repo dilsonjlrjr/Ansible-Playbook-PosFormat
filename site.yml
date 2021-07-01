@@ -4,6 +4,6 @@
   hosts: local
   roles:
     - installPackages
-    - installDocker
-    - installK8s
-    - installNodeJS
+    - Ansible-Role-Install-Docker
+    - Ansible-Role-Install-K8S
+    - Ansible-Role-Install-NodeJS

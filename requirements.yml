@@ -1,12 +1,12 @@
 ---
-- src: git@github.com:nilsonvieira/InstallDocker.git
+- src: git@github.com:nilsonvieira/Ansible-Role-Install-Docker.git
   scm: git
-  name: installDocker
+  name: Ansible-Role-Install-Docker
 
-- src: git@github.com:nilsonvieira/InstallK8s.git
+- src: git@github.com:nilsonvieira/Ansible-Role-Install-K8S.git
   scm: git
-  name: installK8s
+  name: Ansible-Role-Install-K8S
 
-- src: git@github.com:nilsonvieira/Install_NodeJS.git
+- src: git@github.com:nilsonvieira/Ansible-Role-Install-NodeJS.git
   scm: git
-  name: installNodeJS
+  name: Ansible-Role-Install-NodeJS
