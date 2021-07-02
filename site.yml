@@ -7,3 +7,4 @@
     - Ansible-Role-Install-Docker
     - Ansible-Role-Install-K8S
     - Ansible-Role-Install-NodeJS
+    - Ansible-Role-Install-Themes

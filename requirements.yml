@@ -10,3 +10,7 @@
 - src: git@github.com:nilsonvieira/Ansible-Role-Install-NodeJS.git
   scm: git
   name: Ansible-Role-Install-NodeJS
+
+- src: git@github.com:nilsonvieira/Ansible-Role-Install-Themes.git
+  scm: git
+  name: Ansible-Role-Install-Themes
